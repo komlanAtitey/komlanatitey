@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komlan Atitey</title>
+    <link rel="shortcut icon" type="image/png" href="images/imageicon.png" />
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Add icon library -->
+    <script src="/js/mathjax-config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css"
+        crossorigin="anonymous" title="hl-light">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css"
+        crossorigin="anonymous" title="hl-dark" disabled>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
+        integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA=="
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"
+        integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg=="
+        crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous"
+        async></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    <link rel="stylesheet" href="/css/wowchemy.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111897145-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        function trackOutboundLink(url, target) {
+            gtag('event', 'click', {
+                'event_category': 'outbound',
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function () {
+                    if (target !== '_blank') {
+                        document.location = url;
+                    }
+                }
+            });
+            console.debug("Outbound link clicked: " + url);
+        }
+        function onClickCallback(event) {
+            if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+                return;
+            }
+            trackOutboundLink(event.target, event.target.getAttribute('target'));
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-111897145-1', {});
+        document.addEventListener('click', onClickCallback, false);
+    </script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Home">
+    <link rel="manifest" href="/index.webmanifest">
+    <link rel="icon" type="image/png"
+        href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_32x32_fill_lanczos_center_2.png">
+    <link rel="apple-touch-icon" type="image/png"
+        href="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_192x192_fill_lanczos_center_2.png">
+    <link rel="canonical" href="/">
+    <meta property="twitter:card" content="summary">
+    <meta property="og:site_name" content="Home">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Home">
+    <meta property="og:description" content="Postdoctoral researcher">
+    <meta property="og:image"
+        content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png">
+    <meta property="twitter:image"
+        content="/images/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_2.png">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:updated_time" content="2022-11-21T18:08:38-04:00">
+    <style>
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        figure {
+            border: 0px #cccccc solid;
+            padding: 20px;
+            margin: auto;
+        }
+
+        figcaption {
+            background-color: white;
+            color: black;
+            font-style: italic;
+            padding: 2px;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            line-height: 50px;
+            background-color: #eee;
+            width: 100%;
+            z-index: 2;
+        }
+
+        header * {
+            display: inline;
+            height: 50px;
+        }
+
+        header ul {
+            padding: 0;
+        }
+
+        header li {
+            margin-left: 20px;
+        }
+
+
+
+        #hero .profile-img {
+            width: 300px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+        }
+
+        div {
+            /* border: 1px solid black;*/
+            /* background-color: lightblue;*/
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+        }
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 60%;
+            padding: 10px;
+            height: 380px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <img src="images/komlan.png" class="profile-img">
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">Bio</a></li>
+                <li><a href="#work">Publications</a></li>
+                <li><a href="#future">Projects</a></li>
+                <li><a href="#lecturer">Teaching</a></li>
+                <li><a href="manuscript/Resume_Atitey.pdf">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <section id="hero">
+                <figure>
+                    <img src="images/komlan.png" alt="">
+                    <figcaption>
+                        <h2>Komlan Atitey, PhD</h2><br>
+                        <h3>Research Fellow</h3><br>
+                        <font color="DARKOLIVEGREEN">
+                            <p>
+                            <h4> Biostatistics and Computational Biology Branch (BCBB)<br>
+                                National Institute of Environmental Health Sciences (NIEHS)<br>
+                                National Institutes of Health (NIH)</h4>
+                            </p><br>
+                        </font>
+                        <font color="NOT DARKOLIVEGREEN">
+                            <address>
+                                111 Tw Alexander Dr<br>
+                                David P Rall Building<br>
+                                Research Triangle Park, NC 27709, United States<br>
+                            </address>
+                        </font>
+                        <figcaption>
+                </figure>
+            </section><br>
+
+            <section id="about">
+                <div class="section-inner">
+                    <h2>Bio</h2><br>
+                    <p style="text-align:left;">I am currently an employee of the <a href="https://www.nih.gov/"
+                            target="_blank" rel="noopener">National Institutes
+                            of Health (NIH)</a>, working as a Research Fellow in the <a
+                            href="https://www.niehs.nih.gov/research/atniehs/labs/bb/staff/index.cfm" target="_blank"
+                            rel="noopener">Biostatistics and Computational Biology Branch (BCBB)</a> of the <a
+                            href="https://www.niehs.nih.gov/" target="_blank" rel="noopener">National Institute of
+                            Environmental Health Sciences (NIEHS)</a>.</p><br>
+                    <p style="text-align:left;">My current research program addresses two main questions. Firstly, 
+                        I am dedicated to developing a hybrid model that combines machine learning and mechanistic 
+                        modeling to gain biological insights into the factors contributing to cancer heterogeneity.
+                        This effort will lead to a significant impact on understanding the complexity of cancer and
+                        potentially result in new discoveries in the field of oncology. Secondly, it
+                        focuses on developing and validating accurate and robust models
+                        for single-cell spatiotemporal analysis, aimed at visualizing and interpreting cellular
+                        relationships. </p><br>
+
+                    <p style="text-align:left;">My interests in statistical methods include the following: Methods for
+                        spatio-temporal single-cell analysis; Identifying cancer drivers
+                        from single-cell and imaging data; Engineering anti-infection drugs or optimizing drug
+                        combination therapies for various diseases; Integrating mechanistic models
+                        and machine learning approaches to create hybrid models that can capture both the deterministic
+                        nature of biological processes and the ability to adapt and learn from data.</p><br>
+                    <p style="text-align:left;">I received my PhD in Computational Biology from the <a
+                            href="https://www.swansea.ac.uk/engineering/" target="_blank" rel="noopener">
+                            College of Engineering</a> at Swansea University, United Kingdom, in August 2019. Prior to
+                        that, I earned my bachelor's and master's degrees
+                        in physics from the <a href="https://en.univ-lome.tg/" target="_blank" rel="noopener">Faculty of
+                            sciences</a> at the University of Lome,
+                        Togo, in 2006 and 2007 respectively. Additionally, I obtained a second master's degree in
+                        Information and Communication Engineering from
+                        <a href="https://english.hrbeu.edu.cn/" target="_blank" rel="noopener">Harbin Engineering
+                            University</a> in Harbin, Heilongjiang, China,
+                        in 2015. In 2023, I earned two certifications: one in Data Science - Machine Learning and the
+                        other in High-Dimensional
+                        Data Analysis, both from online courses offered by <a href="https://statistics.fas.harvard.edu/data-science"
+                            target="_blank" rel="noopener">Harvard University</a>
+                        in Massachusetts, United States.
+                    </p><br>
+                    <p style="text-align:left;">Before joining BCBB in November 2020, I served as a Postdoctoral Research Associate at
+                        the <a href="https://www.unl.edu/" target="_blank" rel="noopener">University of
+                            Nebraska-Lincoln</a> in Lincoln, NE, USA. During that time, my research involved working on
+                        a Multiscale
+                        Multicellular Mathematical Model of Immunogenicity. Additionally, after completing my first
+                        master's degree in physics, I worked as a High School
+                        Physics Teacher in my home country, Togo, for 5 years.</p><br>
+                    <p style="text-align:left;">In my free time, I enjoy connecting with people and running. I also have
+                        a keen interest in reading books on stoicism.</p><br>
+                    <h4>
+                        <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> Download my <a
+                                href="manuscript/Resume_Atitey.pdf" target="_blank">CV</a></p>
+                    </h4>
+                </div>
+            </section>
+
+            <section id="work">
+                <div class="section-inner">
+                    <h2>Publications</h2><br>
+                    <ul>
+                        <li style="text-align:left;">
+                            <p><a href="https://www.sciencedirect.com/science/article/pii/S1532046422002027"
+                                    target="_blank" rel="noopener">&ldquo;DEGBOE: Discrete time Evolution modeling of
+                                    Gene mutation through Bayesian inference using qualitative Observation of mutation
+                                    Events&rdquo;</a> is out. This work enhances the understanding of gene-gene
+                                interactions in the dynamics of gene mutations that drive cancer development and
+                                progression.</br></br></p>
+                        </li>
+                        <li style="text-align:left;">
+                            <p><a href="https://www.frontiersin.org/articles/10.3389/fmolb.2022.777390/full"
+                                    target="_blank" rel="noopener">&ldquo;Mathematical Modeling of Proliferative Immune
+                                    Response Initiated by Interactions Between Classical Antigen-Presenting Cells Under
+                                    Joint Antagonistic IL-2 and IL-4 Signaling&rdquo;</a> is out. This work investigates
+                                the combination of machine learning and mechanistic modeling to comprehend the
+                                mechanisms of the dynamic interplay of lymphocyte proliferation with the complex
+                                interaction effects of cytokines during an immune response to pathogen
+                                invasion.</br></br></p>
+                        </li>
+                        <li style="text-align:left;">
+                            <p><a href="https://www.frontiersin.org/articles/10.3389/fgene.2019.00549/full?ref=https://githubhelp.com"
+                                    target="_blank" rel="noopener">&ldquo;Comprehensive Review of Models and Methods for
+                                    Inferences in Bio-Chemical Reaction Networks&rdquo;</a> is out. This investigation
+                                demonstrates that the most common models of biochemical reaction networks involve
+                                differential equations, Markov processes, mass action kinetics, and state space
+                                representations. Additionally, the most common tasks associated with these models are
+                                parameter inference and model identification. </br></br></p>
+                        </li>
+                        <li style="text-align:left;">
+                            <p><a href="https://iopscience.iop.org/article/10.1088/2057-1976/aaef5c/meta"
+                                    target="_blank" rel="noopener">&ldquo;Inferring distributions from observed mRNA and
+                                    protein copy counts in genetic circuits&rdquo;</a> is out. This work presents a
+                                statistical method to infer distributions of mRNA and protein counts from observed data.
+                                The main advantage of this method is that it does not require any prior assumptions or
+                                knowledge about the underlying chemical reactions. </br></br></p>
+                        </li>
+                        <li style="text-align:left;">
+                            <p><a href="https://www.sciencedirect.com/science/article/pii/S0303264718301072"
+                                    target="_blank" rel="noopener">&ldquo;Elucidating effects of reaction rates on
+                                    dynamics of the lac circuit in Escherichia coli&rdquo;</a> is out. This work
+                                quantifies the uncertainty of not knowing the accurate reaction rates of biochemical
+                                reactions and aims to understand how these reaction rates affect gene expression.
+                                </br></br></p>
+                        </li>
+                        <li style="text-align:left;">
+                            <p><a href="https://www.liebertpub.com/doi/full/10.1089/cmb.2018.0055" target="_blank"
+                                    rel="noopener">&ldquo;Determining the Transcription Rates Yielding Steady-State
+                                    Production of mRNA in the Lac Genetic Switch of Escherichia coli&rdquo;</a> is out.
+                                This work elucidates the regulatory dynamics of gene expression activation and
+                                inactivation by evaluating the transcription rates that yield steady-state mRNA
+                                production in active and inactive states of the lac circuit, and the results of the
+                                studies can be used in synthetic biology applications to understand the limits of
+                                genetic synthesis. </br></br></p>
+                        </li>
+                        <li style="text-align:left;">
+                            <p><a href="https://link.springer.com/chapter/10.1007/978-3-319-21978-3_33" target="_blank"
+                                    rel="noopener">&ldquo;A Novel Prediction Algorithm in Gaussian-Mixture Probability
+                                    Hypothesis Density Filter for Target Tracking&rdquo;</a> is out. This work provides
+                                an improved Gaussian mixture probability hypothesis density filter for multiple target
+                                tracking to maintain estimates of the targets' current states. </br></br></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--section four-->
+            <section id="work">
+                <div class="section-inner">
+                    <h2>Manuscript Under Review</h2><br>
+                    <ul>
+                        <li style="text-align:left;">
+                            <p><a href="manuscript/mibcovis.pdf">Benchmarking Spatiotemporal Data Reduction Models with
+                                    Unknown Ground Truth using Optimal Visualization and Interpretability Metrics</a>.
+                                This study provides a reliable set of metrics and an unbiased benchmarking computational
+                                framework, enabling optimal visualization and interpretability of relationships within
+                                spatiotemporal metric maps after single cell data reduction.</p></li><br>
+
+                        <li style="text-align:left;">
+                            <p><a href="https://arxiv.org/abs/1911.00757" target="_blank"
+                                    rel="noopener">&ldquo;Variational Bayesian inference of hidden stochastic processes
+                                    with unknown parameters&rdquo;</a> This research adopts a machine learning approach
+                                to devise variational Bayesian inference for estimating hidden processes from non-linear
+                                noisy observations. </p></li><br>
+                    </ul>
+                </div>
+            </section>
+
+            <!--section five-->
+            <section id="proj">
+                <div class="section-inner">
+                    <h3>
+                        <p style="color:red">Projects 1:</p>
+                    </h3><br>
+                    <h2>Elucidating the dynamic interplay of tumor heterogeneity and the immune microenvironment during
+                        lung cancer progression</h2><br>
+                    <h3>Scientific problem and Challenges</h3><br>
+                    <ul>
+                        <li style="text-align:left;">Cancer is a collection of heterogeneous diseases with varying
+                            molecular and phenotypic characteristics <a
+                                href="https://www.nature.com/articles/bjc2012581" target="_blank"
+                                rel="noopener">ref</a>. The extensive molecular heterogeneity exhibited by tumors
+                            complicates the identification of potential cancer drivers.
+                            When studying epigenetic events, a potential difficulty, which may also affect cancer
+                            metastasis,
+                            is the lack of an analytical framework for identifying epigenetic changes in event drivers
+                            <a href="https://www.sciencedirect.com/science/article/pii/S1044579X17300536"
+                                target="_blank" rel="noopener">ref</a>.</li><br>
+
+                        <li style="text-align:left;"> However, identifying cancer drivers is vital since they directly
+                            and/or indirectly provide a selective growth advantage
+                            to cancer cells by activating mutations in oncogenes and/or mutations that silence tumor
+                            suppressor genes. Nevertheless,
+                            investigating interactions between genes associated with cancer is challenging because of
+                            the enormous datasets and sophisticated
+                            computational analyses required.</li> <br>
+
+                        <h3>Proposed solution</h3><br>
+
+                        <p style="text-align:left;">My goal is to develop analytical frameworks that explore the
+                            interplay between genetic, epigenetic, and non-genetic mechanisms of cancer
+                            to identify cancer drivers for cancer prevention, diagnosis, and treatment.</p><br>
+
+                            <p style="color:white">atitey</p>
+
+                        <h4 style="text-align:left;"><i>1. Cancer driver theory and dynamics of tumor heterogeneity</i>
+                        </h4><br>
+
+                        <p style="text-align:left;">The <a href="manuscript/DEGBOE.pdf" target="_blank">DEGBOE</a> 
+                            computational framework interrogates the dynamic
+                            evolution of a gene mutation concerning its interaction with other genes,
+                            enabling the exploration of fundamental questions about cancer drivers. Here, on the basis
+                            of single cell analysis, I plan to use two approaches to address questions about distinguishing cancer driver
+                            mutations from passenger mutations. </p><br>
+
+                            <p style="text-align:left;">Indeed, single-cell RNA sequencing (scRNA-seq) is a technology that analyzes the 
+                                transcriptomes of complex tissues at the single-cell level and reveals the heterogeneity of tumor cells, 
+                                thus monitoring the progress of tumor development and preventing further cellular deterioration.
+                                In this regard, I collected scRNA-seq datasets of lung adenocarcinoma (LUAD) patient-derived cells, 
+                                covering primary tumor, lymph node, brain metastases, pleural effusion, as well as normal lung tissues 
+                                and lymph nodes. This enables me to describe the dynamics of LUAD evolution in terms of gene expression 
+                                in cells in three stages: normal lung, primary LUAD, and metastatic LUAD.</p><br>
+
+                            <p style="text-align:left;">To identify clusters of each of the data, and relying on the Seurat and tidyverse 
+                                packages, I performed different steps in scRNA-seq data analysis based on significant principal component.
+                                I further used FindAllMarkers() function of Seurat to find markers 
+                                that define clusters. I began by identifying gene markers of cells in the normal lung data, 
+                                and for consistency, I used the same gene markers to identify the cell types in the primary 
+                                and metastatic LUAD data.</p><br> 
+
+                            <p>While a single cancer driver is an individual gene which initializes and drives cancer progression, 
+                               a module of cancer drivers is a set of genes including genes which have a mutual exclusivity of 
+                               mutations and influence their targets to develop a cancer. I will extend the DEGBOE analytical 
+                               framework to the extDEGBOE for modeling a number of n cohesive genes which have a high density of 
+                               interactions in a gene network in driving lung cancer in relation to (N-n) gene-gene interactions 
+                               and cell-cell interactions. </p><br>    
+
+                        <h4 style="text-align:left;">The key objective of this project is to develop a computational
+                            Markov model of evolutionary dynamics of cancer driver module and identify genetic drivers
+                            that silence tumor suppressor genes in the tumor microenvironment to drive cancer growth
+                            through interaction between cancer cells and normal cells.</h4><br>
+
+                        <h4>
+                            <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> See the <a
+                                    href="manuscript/Overview1.pdf" target="_blank">Figure</a> for illustration</p>
+                        </h4><br>
+
+                        <p style="color:white">atitey</p>
+
+
+                        <h4 style="text-align:left;"><i>2. Interplay between genetics and epigenetics mechanisms on the
+                            dynamic of cancer drivers</i></h4><br>
+
+                        <p style="text-align:left;"></p>Epigenetic modifications are primary mechanisms of regulation 
+                            during carcinogenesis, or cancer progression <a
+                            href="https://www.tandfonline.com/doi/abs/10.4161/epi.6.7.16262" target="_blank"
+                            rel="noopener">ref</a>. In addition, the activation of oncogenes 
+                            and/or suppression of tumor suppressor genes by a cancer driver contributes to the onset
+                            of cancer <a href="https://link.springer.com/article/10.1186/s12943-020-01197-3" target="_blank"
+                            rel="noopener">ref</a>.</p><br>
+
+                        <h4>I envision the creation of a hybrid model that will accommodate both deterministic and 
+                            probabilistic information in two complementary ways, which will revolutionize the way 
+                            we connect carcinogenesis to genetic and epigenetic mechanisms.</h4><br>
+
+                        <li style="text-align:left;">I will first develop a quantitative deterministic mathematical
+                            model (qCancerDr) that describes the dual role of cancer drivers
+                            in regulating aspects of cellular metabolism.</li><br>
+
+                        <li style="text-align:left;">Second, I will connect epigenetics and genetics mechanisms to
+                            study carcinogenesis and cancer progression by linking qCancerDr with extDEGBOE to
+                            create a mixed model that identifies cancer drivers in the dynamics of tumor
+                            heterogeneity. The mixed model will exploit deterministic information on environmental
+                            factors to assess their roles in carcinogenesis.
+                    </p><br>
+                    <h4>
+                        <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> See the <a
+                                href="manuscript/Overview2.pdf" target="_blank">Figure</a> for illustration</p>
+                    </h4><br>
+
+                    <p style="color:white">atitey</p>
+
+                    <h4 style="text-align:left;"><i> 3. Primary results</i></h4><br>
+
+                    <p style="text-align:left;">Here, I present a part of the results related to distinguishing 
+                        single cancer driver mutations from passenger mutations based on gene-gene interactions.</p></br>
+
+                    <h4>
+                        <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> See the <a
+                                href="manuscript/Overview3.pdf" target="_blank">Figure</a> for illustration</p>
+                    </h4>
+
+                    </ul>
+                </div>
+            </section>
+
+<!--section four-->
+            <section id="future">
+                <div class="section-inner">
+                    <h3>
+                        <p style="color:red">Projects 2:</p>
+                    </h3><br>
+                    <h2>Optimizing single-cell spatiotemporal delay variations to identify key features driving
+                        progression</h2><br>
+                    <h3>Scientific problem and Challenges</h3><br>
+                    <ul>
+                        <p style="text-align:left;">One of the major challenges in modeling the dynamics of a
+                            single-cell trajectory using single-cell analysis is dealing with the
+                            complexity and variability of biological systems. More so, the high-dimensional nature of
+                            single-cell data including the spatial interactions pose
+                            a challenge for data visualization, analysis, and interpretation.
+                            Therefore, developing and validating accurate and robust models for single-cell
+                            spatiotemporal trajectory analysis
+                            remains a significant challenge in the field. </p><br>
+
+                        <h3>Proposed solution</h3><br>
+                        <p style="text-align:left;">Considering the fact that single-cell data are inherently dynamic
+                            and stochastic, I propose a multi-state Markov-based
+                            computational framework denoted Time Order Structure Learning (TOSL) to tackle the
+                            spatiotemporal dependency of ordered cells in the
+                            low-dimensional space resulting from temporal data reduction or imaging analysis.</p><br>
+
+                        <p style="color:white">atitey</p>
+
+                        <h4 style="text-align:left;"><i>Time Order Structure Learning (TOSL) </i></h4><br>
+                        <p style="text-align:left;">This framework can be adapted to model state transitions in
+                            multidimensional data sets with any underlying ordering of data points or trajectory
+                            structure.
+                            For example, preliminary results suggests that the identification of the variations in delay
+                            time to stationarity allows for the identification of therapeutic
+                            targets that may be useful to study deviations from normal development resulting in diseases
+                            like cancer. </p><br>
+                        <p style="text-align:left;">Optimizing this variability and integrating with feature selection
+                            approaches could provide useful insights on the major timepoints and state transitions that
+                            drive the underlying biological process.</p><br>
+                        <p style="text-align:left;">My current research in the direction to enhance the TOSL framework
+                            to identify genes and cells which trigger the stationarity of state transitions of cells
+                            during the developmental
+                            biology accounting for gene-gene interaction, and cell-cell communication.</p><br>
+                        <p style="text-align:left;">Primary results of this work has been presented at the 2023 International Conference on
+                            Intelligent Systems for Molecular Biology (ISMB 2023) on July 2023 in Lyon, France.</p><br>
+                        <h4>
+                            <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> Download <a
+                                    href="manuscript/ISMB2023_atitey.pdf" target="_blank">the Poster</a></p>
+                        </h4><br>
+                    </ul>
+                </div>
+            </section>
+       
+            <!--section height-->
+            <section id="lecturer">
+                <div class="section-inner">
+                    <h2>Teaching: Biostatistics and Bioinformatics Short Courses</h2><br>
+
+                    <li><i class="fas fa-download  pr-1 fa-fw"></i> See the <a href="manuscript/course1.pdf"
+                            target="_blank"> course for module 5, 6, and 7 </a></p>
+                    </li><br><br>
+                    <li><i class="fas fa-download  pr-1 fa-fw"></i> See the <a href="manuscript/course2.pdf"
+                            target="_blank"> course for module 8, 9, and 10 </a></p>
+                    </li><br>
+                </div>
+            </section>
+
+
+            <section id="contact">
+                <div class="wrapper">
+                    <h2>Contact me</h2><br>
+                    <p>You can find me on:</p><br>
+                    <ul class="network-icon" aria-hidden="true">
+                        <a href="https://www.facebook.com/atitey.komlan" target="_blank" rel="noopener"><i
+                                class="fab fa-facebook big-icon"></i></a><br>
+                        <a href="https://twitter.com/KomlanAtitey" target="_blank" rel="noopener"><i
+                                class="fab fa-twitter big-icon"></i></a><br>
+                        <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C34&q=Komlan+Atitey&oq=Atite"
+                            target="_blank" rel="noopener"><i class="fas fa-graduation-cap big-icon"></i></a><br>
+                        <a href="https://github.com/KomlanAtitey62" target="_blank" rel="noopener"><i
+                                class="fab fa-github big-icon"></i></a><br>
+                        <a href="https://www.linkedin.com/in/komlan-atitey-phd-34082998/" target="_blank"
+                            rel="noopener"><i class="fab fa-linkedin big-icon"></i></a><br>
+                    </ul><br>
+                    <p>komlan.atitey@nih.gov / atiteydavidkomlan@yahoo.fr</p>
+                </div>
+            </section>
+        </div>
+        <div class="footer">
+            © Copyright eglikokotako, 2023
+        </div>
+    </main>
+</body>
+</html>
