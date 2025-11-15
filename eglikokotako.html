@@ -189,13 +189,13 @@
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">Bio</a></li>
+            <li><a href="manuscript/Resume_Atitey.pdf">CV</a></li>
             <li><a href="#research">Research Interests</a></li>
             <li><a href="#work">Publications</a></li>
             <li><a href="#tools">Computational Tools / Software</a></li>
             <li><a href="#future">Projects &amp; Ongoing Research</a></li>
             <li><a href="#awards">Awards, Honors, &amp; Fellowships</a></li>
             <li><a href="#lecturer">Teaching</a></li>
-            <li><a href="manuscript/Resume_Atitey.pdf">CV</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -484,189 +484,7 @@
                 </div>
             </section>
 
-
-
-            <!--section five-->
-            <section id="proj">
-                <div class="section-inner">
-                    <h3>
-                        <p style="color:red">Projects 1:</p>
-                    </h3><br>
-                    <h2>Elucidating the dynamic interplay of tumor heterogeneity and the immune microenvironment during
-                        lung cancer progression</h2><br>
-                    <h3>Scientific problem and Challenges</h3><br>
-                    <ul>
-                        <li style="text-align:left;">Cancer is a collection of heterogeneous diseases with varying
-                            molecular and phenotypic characteristics <a
-                                href="https://www.nature.com/articles/bjc2012581" target="_blank"
-                                rel="noopener">ref</a>. The extensive molecular heterogeneity exhibited by tumors
-                            complicates the identification of potential cancer drivers.
-                            When studying epigenetic events, a potential difficulty, which may also affect cancer
-                            metastasis,
-                            is the lack of an analytical framework for identifying epigenetic changes in event drivers
-                            <a href="https://www.sciencedirect.com/science/article/pii/S1044579X17300536"
-                                target="_blank" rel="noopener">ref</a>.</li><br>
-
-                        <li style="text-align:left;"> However, identifying cancer drivers is vital since they directly
-                            and/or indirectly provide a selective growth advantage
-                            to cancer cells by activating mutations in oncogenes and/or mutations that silence tumor
-                            suppressor genes. Nevertheless,
-                            investigating interactions between genes associated with cancer is challenging because of
-                            the enormous datasets and sophisticated
-                            computational analyses required.</li> <br>
-
-                        <h3>Proposed solution</h3><br>
-
-                        <p style="text-align:left;">My goal is to develop analytical frameworks that explore the
-                            interplay between genetic, epigenetic, and non-genetic mechanisms of cancer
-                            to identify cancer drivers for cancer prevention, diagnosis, and treatment.</p><br>
-
-                            <p style="color:white">atitey</p>
-
-                        <h4 style="text-align:left;"><i>1. Cancer driver theory and dynamics of tumor heterogeneity</i>
-                        </h4><br>
-
-                        <p style="text-align:left;">The <a href="manuscript/DEGBOE.pdf" target="_blank">DEGBOE</a> 
-                            computational framework interrogates the dynamic
-                            evolution of a gene mutation concerning its interaction with other genes,
-                            enabling the exploration of fundamental questions about cancer drivers. Here, on the basis
-                            of single cell analysis, I plan to use two approaches to address questions about distinguishing cancer driver
-                            mutations from passenger mutations. </p><br>
-
-                            <p style="text-align:left;">Indeed, single-cell RNA sequencing (scRNA-seq) is a technology that analyzes the 
-                                transcriptomes of complex tissues at the single-cell level and reveals the heterogeneity of tumor cells, 
-                                thus monitoring the progress of tumor development and preventing further cellular deterioration.
-                                In this regard, I collected scRNA-seq datasets of lung adenocarcinoma (LUAD) patient-derived cells, 
-                                covering primary tumor, lymph node, brain metastases, pleural effusion, as well as normal lung tissues 
-                                and lymph nodes. This enables me to describe the dynamics of LUAD evolution in terms of gene expression 
-                                in cells in three stages: normal lung, primary LUAD, and metastatic LUAD.</p><br>
-
-                            <p style="text-align:left;">To identify clusters of each of the data, and relying on the Seurat and tidyverse 
-                                packages, I performed different steps in scRNA-seq data analysis based on significant principal component.
-                                I further used FindAllMarkers() function of Seurat to find markers 
-                                that define clusters. I began by identifying gene markers of cells in the normal lung data, 
-                                and for consistency, I used the same gene markers to identify the cell types in the primary 
-                                and metastatic LUAD data.</p><br> 
-
-                            <p>While a single cancer driver is an individual gene which initializes and drives cancer progression, 
-                               a module of cancer drivers is a set of genes including genes which have a mutual exclusivity of 
-                               mutations and influence their targets to develop a cancer. I will extend the DEGBOE analytical 
-                               framework to the extDEGBOE for modeling a number of n cohesive genes which have a high density of 
-                               interactions in a gene network in driving lung cancer in relation to (N-n) gene-gene interactions 
-                               and cell-cell interactions. </p><br>    
-
-                        <h4 style="text-align:left;">The key objective of this project is to develop a computational
-                            Markov model of evolutionary dynamics of cancer driver module and identify genetic drivers
-                            that silence tumor suppressor genes in the tumor microenvironment to drive cancer growth
-                            through interaction between cancer cells and normal cells.</h4><br>
-
-                        <h4>
-                            <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> See the <a
-                                    href="manuscript/Overview1.pdf" target="_blank">Figure</a> for illustration</p>
-                        </h4><br>
-
-                        <p style="color:white">atitey</p>
-
-
-                        <h4 style="text-align:left;"><i>2. Interplay between genetics and epigenetics mechanisms on the
-                            dynamic of cancer drivers</i></h4><br>
-
-                        <p style="text-align:left;"></p>Epigenetic modifications are primary mechanisms of regulation 
-                            during carcinogenesis, or cancer progression <a
-                            href="https://www.tandfonline.com/doi/abs/10.4161/epi.6.7.16262" target="_blank"
-                            rel="noopener">ref</a>. In addition, the activation of oncogenes 
-                            and/or suppression of tumor suppressor genes by a cancer driver contributes to the onset
-                            of cancer <a href="https://link.springer.com/article/10.1186/s12943-020-01197-3" target="_blank"
-                            rel="noopener">ref</a>.</p><br>
-
-                        <h4>I envision the creation of a hybrid model that will accommodate both deterministic and 
-                            probabilistic information in two complementary ways, which will revolutionize the way 
-                            we connect carcinogenesis to genetic and epigenetic mechanisms.</h4><br>
-
-                        <li style="text-align:left;">I will first develop a quantitative deterministic mathematical
-                            model (qCancerDr) that describes the dual role of cancer drivers
-                            in regulating aspects of cellular metabolism.</li><br>
-
-                        <li style="text-align:left;">Second, I will connect epigenetics and genetics mechanisms to
-                            study carcinogenesis and cancer progression by linking qCancerDr with extDEGBOE to
-                            create a mixed model that identifies cancer drivers in the dynamics of tumor
-                            heterogeneity. The mixed model will exploit deterministic information on environmental
-                            factors to assess their roles in carcinogenesis.
-                    </p><br>
-                    <h4>
-                        <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> See the <a
-                                href="manuscript/Overview2.pdf" target="_blank">Figure</a> for illustration</p>
-                    </h4><br>
-
-                    <p style="color:white">atitey</p>
-
-                    <h4 style="text-align:left;"><i> 3. Primary results</i></h4><br>
-
-                    <p style="text-align:left;">Here, I present a part of the results related to distinguishing 
-                        single cancer driver mutations from passenger mutations based on gene-gene interactions.</p></br>
-
-                    <h4>
-                        <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> See the <a
-                                href="manuscript/Overview3.pdf" target="_blank">Figure</a> for illustration</p>
-                    </h4>
-
-                    </ul>
-                </div>
-            </section>
-
-<!--section four-->
-            <section id="future">
-                <div class="section-inner">
-                    <h3>
-                        <p style="color:red">Projects 2:</p>
-                    </h3><br>
-                    <h2>Optimizing single-cell spatiotemporal delay variations to identify key features driving
-                        progression</h2><br>
-                    <h3>Scientific problem and Challenges</h3><br>
-                    <ul>
-                        <p style="text-align:left;">One of the major challenges in modeling the dynamics of a
-                            single-cell trajectory using single-cell analysis is dealing with the
-                            complexity and variability of biological systems. More so, the high-dimensional nature of
-                            single-cell data including the spatial interactions pose
-                            a challenge for data visualization, analysis, and interpretation.
-                            Therefore, developing and validating accurate and robust models for single-cell
-                            spatiotemporal trajectory analysis
-                            remains a significant challenge in the field. </p><br>
-
-                        <h3>Proposed solution</h3><br>
-                        <p style="text-align:left;">Considering the fact that single-cell data are inherently dynamic
-                            and stochastic, I propose a multi-state Markov-based
-                            computational framework denoted Time Order Structure Learning (TOSL) to tackle the
-                            spatiotemporal dependency of ordered cells in the
-                            low-dimensional space resulting from temporal data reduction or imaging analysis.</p><br>
-
-                        <p style="color:white">atitey</p>
-
-                        <h4 style="text-align:left;"><i>Time Order Structure Learning (TOSL) </i></h4><br>
-                        <p style="text-align:left;">This framework can be adapted to model state transitions in
-                            multidimensional data sets with any underlying ordering of data points or trajectory
-                            structure.
-                            For example, preliminary results suggests that the identification of the variations in delay
-                            time to stationarity allows for the identification of therapeutic
-                            targets that may be useful to study deviations from normal development resulting in diseases
-                            like cancer. </p><br>
-                        <p style="text-align:left;">Optimizing this variability and integrating with feature selection
-                            approaches could provide useful insights on the major timepoints and state transitions that
-                            drive the underlying biological process.</p><br>
-                        <p style="text-align:left;">My current research in the direction to enhance the TOSL framework
-                            to identify genes and cells which trigger the stationarity of state transitions of cells
-                            during the developmental
-                            biology accounting for gene-gene interaction, and cell-cell communication.</p><br>
-                        <p style="text-align:left;">Primary results of this work has been presented at the 2023 International Conference on
-                            Intelligent Systems for Molecular Biology (ISMB 2023) on July 2023 in Lyon, France.</p><br>
-                        <h4>
-                            <p style="color:blue"><i class="fas fa-download  pr-1 fa-fw"></i> Download <a
-                                    href="manuscript/ISMB2023_atitey.pdf" target="_blank">the Poster</a></p>
-                        </h4><br>
-                    </ul>
-                </div>
-            </section>
-       
+                            
             <!--section height-->
             <section id="lecturer">
                 <div class="section-inner">
